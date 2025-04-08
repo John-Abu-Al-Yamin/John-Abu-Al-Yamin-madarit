@@ -8,7 +8,7 @@ const store = configureStore({
   reducer: {
     themeSetting: themeSettingSlice,
     sidebarSlice: sidebarSlice,
-    authSlice:authSlice,
+    auth:authSlice,
   },
 });
 

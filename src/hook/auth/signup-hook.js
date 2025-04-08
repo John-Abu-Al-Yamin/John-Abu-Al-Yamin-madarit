@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState } from 'react';
-import { signupUser } from '../../store/auth/authSlice';
-import { toast } from "react-toastify";
+ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from 'react-redux';
+import { signupUser } from '../../core/redux/auth/authSlice';
 
 const signupHook = () => {
   const dispatch = useDispatch();

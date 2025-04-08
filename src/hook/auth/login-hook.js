@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
  import { useDispatch, useSelector } from 'react-redux';
-import {loginUser } from '../../store/auth/authSlice';
-import { toast } from "react-toastify";
+ import { toast } from "react-toastify";
+import { loginUser } from '../../core/redux/auth/authSlice';
  
 const LoginHook = () => {
     const dispatch = useDispatch();
