@@ -187,6 +187,9 @@ const Header = () => {
       </div>
     );
   };
+
+  const token = localStorage.getItem("token");
+
   return (
     <>
       <div
@@ -380,14 +383,24 @@ const Header = () => {
                     </Link>
                   </div>
                   <div>
-                    <Link
-                      to="#"
-                      className="text-white btn btn-dark w-100 mb-2"
-                      data-bs-toggle="modal"
-                      data-bs-target="#login-modal"
-                    >
-                      Sign In
-                    </Link>
+                    {token ? (
+                      <Link
+                        to="/user/my-profile"
+                        className="text-white btn btn-dark w-100 mb-2"
+                      >
+                        Profile
+                      </Link>
+                    ) : (
+                      <Link
+                        to="#"
+                        className="text-white btn btn-dark w-100 mb-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#login-modal"
+                      >
+                        Sign In
+                      </Link>
+                    )}
+                   
                   </div>
                 </div>
               </div>
