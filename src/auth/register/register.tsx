@@ -1,11 +1,36 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import ImageWithBasePath from '../../../core/common/imageWithBasePath'
-import { all_routes } from '../../router/all_routes';
-type PasswordField = "password" | "confirmPassword";
+import { all_routes } from '../../feature-module/router/all_routes';
+import ImageWithBasePath from '../../core/common/imageWithBasePath';
+import signupHook from '../../hook/auth/signup-hook';
+  type PasswordField = "password" | "confirmPassword";
 
-const Register = () => {
+ const Register = () => {
 
+  const {
+    email,
+       password,
+       full_name,
+       password_confirmation,
+       address,
+   nationality,
+   passport,
+   ipAddress,
+       loading,
+       isPress,
+       onChangeName,
+       onChangeEmail,
+       onChangePassword,
+       onChangePasswordConfirm,
+       onChangePhone,
+       onChangeAddress,
+   onChangeNationality,
+   onChangePassport,
+   onChangeIpAddress,
+       phone,
+       onSubmit,
+   
+} = signupHook();
   const routes = all_routes
   const [passwordVisibility, setPasswordVisibility] = useState({
     password: false,
@@ -37,9 +62,9 @@ const Register = () => {
                   <h5 className="mb-1">Sign Up</h5>
                   <p>Create your DreamsTour Account</p>
                 </div>
-              </div>
+           </div>
               <div className="card-body">
-                <form>
+                <form onSubmit={onSubmit}>
                   <div className="mb-3">
                     <label className="form-label">Name</label>
                     <div className="input-icon">
@@ -50,6 +75,8 @@ const Register = () => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Enter Full Name"
+                        value={full_name}
+                        onChange={onChangeName}
                       />
                     </div>
                   </div>
@@ -63,6 +90,68 @@ const Register = () => {
                         type="email"
                         className="form-control form-control-lg"
                         placeholder="Enter Email"
+                        value={email}
+                        onChange={onChangeEmail}
+                      />
+                    </div>
+                    <div className="input-icon">
+                      <span className="input-icon-addon">
+                        <i className="isax isax-message" />
+                      </span>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Enter nationality"
+                        value={nationality}
+                        onChange={onChangeNationality}
+                      />
+                    </div>
+                    <div className="input-icon">
+                      <span className="input-icon-addon">
+                        <i className="isax isax-message" />
+                      </span>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Enter address"
+                        value={address}
+                        onChange={onChangeAddress}
+                      />
+                    </div>
+                    <div className="input-icon">
+                      <span className="input-icon-addon">
+                        <i className="isax isax-message" />
+                      </span>
+                      <input
+                        type="number"
+                        className="form-control form-control-lg"
+                        placeholder="Enter ipAddress"
+                        value={ipAddress}
+                        onChange={onChangeIpAddress}
+                      />
+                    </div>
+                    <div className="input-icon">
+                      <span className="input-icon-addon">
+                        <i className="isax isax-message" />
+                      </span>
+                      <input
+                        type="tel"
+                        className="form-control form-control-lg"
+                        placeholder="Enter phone"
+                        value={phone}
+                        onChange={onChangePhone}
+                      />
+                    </div>
+                    <div className="input-icon">
+                      <span className="input-icon-addon">
+                        <i className="isax isax-message" />
+                      </span>
+                      <input
+                        type="file"
+                        className="form-control form-control-lg"
+                        placeholder="Enter passport"
+                        value={passport}
+                        onChange={onChangePassport }
                       />
                     </div>
                   </div>
@@ -80,6 +169,8 @@ const Register = () => {
                         }
                         className="pass-input form-control"
                          placeholder='Enter Password'
+                         value={password}
+                                onChange={onChangePassword}
                       />
                       <span
                         className={`isax toggle-passwords ${passwordVisibility.password
@@ -106,6 +197,8 @@ const Register = () => {
                         }
                         className="pass-input form-control"
                          placeholder='Enter Password'
+                         value={password_confirmation}
+                         onChange={onChangePasswordConfirm}
                       />
                       <span
                         className={`isax toggle-passwords ${passwordVisibility.confirmPassword

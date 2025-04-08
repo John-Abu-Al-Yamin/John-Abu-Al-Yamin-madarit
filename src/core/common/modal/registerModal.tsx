@@ -1,8 +1,33 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ImageWithBasePath from '../imageWithBasePath';
+import signupHook from '../../../hook/auth/signup-hook';
 type PasswordField = "password" | "confirmPassword";
 const RegisterModal = () => {
+   const {
+      email,
+         password,
+         full_name,
+         password_confirmation,
+         address,
+     nationality,
+     passport,
+     ipAddress,
+         loading,
+         isPress,
+         onChangeName,
+         onChangeEmail,
+         onChangePassword,
+         onChangePasswordConfirm,
+         onChangePhone,
+         onChangeAddress,
+     onChangeNationality,
+     onChangePassport,
+     onChangeIpAddress,
+         phone,
+         onSubmit,
+     
+  } = signupHook();
       const [passwordVisibility, setPasswordVisibility] = useState({
         password: false,
         confirmPassword: false,
@@ -29,10 +54,10 @@ const RegisterModal = () => {
           </Link>
         </div>
         <div className="modal-body p-4 pt-0">
-          <form >
+          <form  onSubmit={onSubmit}>
             <div className="text-center border-bottom mb-3">
               <h5 className="mb-1">Sign Up</h5>
-              <p className="mb-3">Create your DreamsTour Account</p>
+              <p className="mb-3">Create your DreamsTour </p>
             </div>
             <div className="mb-2">
               <label className="form-label">Name</label>
@@ -44,6 +69,8 @@ const RegisterModal = () => {
                   type="text"
                   className="form-control form-control-lg"
                   placeholder="Enter Full Name"
+                  value={full_name}
+                  onChange={onChangeName}
                 />
               </div>
             </div>
@@ -57,9 +84,97 @@ const RegisterModal = () => {
                   type="email"
                   className="form-control form-control-lg"
                   placeholder="Enter Email"
+                  value={email}
+                  onChange={onChangeEmail}
                 />
               </div>
             </div>
+
+
+            <div className="mb-2">
+              <label className="form-label">Nationality</label>
+              <div className="input-icon">
+                <span className="input-icon-addon">
+                  <i className="isax isax-message" />
+                </span>
+                <input
+                  type="text"
+                  className="form-control form-control-lg"
+                  placeholder="Enter Nationality"
+                  value={nationality}
+                  onChange={onChangeNationality}
+                />
+              </div>
+            </div>
+
+
+            <div className="mb-2">
+              <label className="form-label">Address</label>
+              <div className="input-icon">
+                <span className="input-icon-addon">
+                  <i className="isax isax-message" />
+                </span>
+                <input
+                  type="text"
+                  className="form-control form-control-lg"
+                  placeholder="Enter Address"
+                  value={address}
+                  onChange={onChangeAddress}
+                />
+              </div>
+            </div>
+
+
+            <div className="mb-2">
+              <label className="form-label">IpAddress</label>
+              <div className="input-icon">
+                <span className="input-icon-addon">
+                  <i className="isax isax-message" />
+                </span>
+                <input
+                  type="email"
+                  className="form-control form-control-lg"
+                  placeholder="Enter IpAddress"
+                  value={ipAddress}
+                        onChange={onChangeIpAddress}
+                />
+              </div>
+            </div>
+
+            <div className="mb-2">
+              <label className="form-label">Phone</label>
+              <div className="input-icon">
+                <span className="input-icon-addon">
+                  <i className="isax isax-message" />
+                </span>
+                <input
+                  type="tel"
+                  className="form-control form-control-lg"
+                  placeholder="Enter Phone"
+                  value={phone}
+                        onChange={onChangePhone}
+                />
+              </div>
+            </div>
+
+            <div className="mb-2">
+              <label className="form-label">Passport</label>
+              <div className="input-icon">
+                <span className="input-icon-addon">
+                  <i className="isax isax-message" />
+                </span>
+                <input
+                  type="file"
+                  className="form-control form-control-lg"
+                  placeholder="Enter Email"
+                  value={passport}
+                        onChange={onChangePassport }
+                />
+              </div>
+            </div>
+
+
+
             <div className="mb-2">
               <label className="form-label">Password</label>
               <div className="input-icon">
@@ -75,6 +190,8 @@ const RegisterModal = () => {
                         }
                         className="form-control form-control-lg pass-input"
                          placeholder='Enter Password'
+                         value={password}
+                         onChange={onChangePassword}
                       />
                       <span
                         className={`isax toggle-passwords ${passwordVisibility.password
@@ -102,6 +219,8 @@ const RegisterModal = () => {
                         }
                         className="form-control form-control-lg pass-input"
                          placeholder='Enter Password'
+                         value={password_confirmation}
+                         onChange={onChangePasswordConfirm}
                       />
                       <span
                         className={`isax toggle-passwords ${passwordVisibility.confirmPassword

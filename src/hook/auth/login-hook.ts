@@ -6,21 +6,21 @@ import { toast } from "react-toastify";
 const LoginHook = () => {
     const dispatch = useDispatch();
   
-    const [phoneEmail, setphoneEmail] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
     const [isPress, setIsPress] = useState(false)
     const onChangeEmail = (e) => {
-        setphoneEmail(e.target.value)
+        setEmail(e.target.value)
     }
 
     const onChangePassword = (e) => {
         setPassword(e.target.value)
     }
 
-    const onSubmit = async (e) => {
-      e.preventDefault();
-      if(phoneEmail === '' || password ==='' ){
+    const onSubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void> = async (e) => {
+        e.preventDefault();
+      if(email === '' || password ==='' ){
         toast.error("Please complete your data")
         console.log("Please complete your data")
       } 
@@ -28,7 +28,7 @@ const LoginHook = () => {
         setIsPress(true)
         setLoading(true)
         await dispatch(loginUser({
-            phoneEmail,
+            email,
             password
         }))
          setLoading(false)
@@ -63,7 +63,7 @@ const LoginHook = () => {
 
     }, [loading])
 
-    return [phoneEmail, password, loading, onChangeEmail, onChangePassword, onSubmit, isPress]
+    return [email, password, loading, onChangeEmail, onChangePassword, onSubmit, isPress]
 }
 
 export default LoginHook

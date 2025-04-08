@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ImageWithBasePath from '../imageWithBasePath';
-
+import LoginHook from '../../../hook/auth/login-hook';
+ 
 const LoginModal = () => {
-    
+  const [
+    email,
+    password,
+    loading,
+    onChangeEmail,
+    onChangePassword,
+    onSubmit,
+ ] = LoginHook();
       const [isPasswordVisible, setPasswordVisible] = useState(false);
     
       const togglePasswordVisibility = () => {
@@ -24,7 +32,7 @@ const LoginModal = () => {
             </Link>
           </div>
           <div className="modal-body p-4 pt-0">
-            <form >
+            <form onSubmit={onSubmit}>
               <div className="text-center mb-3">
                 <h5 className="mb-1">Sign In</h5>
                 <p>Sign in to Start Manage your DreamsTour Account</p>
@@ -39,6 +47,8 @@ const LoginModal = () => {
                     type="email"
                     className="form-control form-control-lg"
                     placeholder="Enter Email"
+                    value={email }
+                    onChange={onChangeEmail}
                   />
                 </div>
               </div>
@@ -53,6 +63,8 @@ const LoginModal = () => {
                       type={isPasswordVisible ? "text" : "password"}
                       className="form-control form-control-lg pass-input"
                        placeholder='Enter Password'
+                       value={password}
+                    onChange={onChangePassword}
                     />
                     <span
                       className={`input-icon-addon toggle-password`}

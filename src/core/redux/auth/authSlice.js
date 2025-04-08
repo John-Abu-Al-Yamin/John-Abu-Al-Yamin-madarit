@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { useInsertData } from "../../../hooks/useInsertData";
+import { useInsertData, useInsertDataWithImage } from "../../../hooks/useInsertData";
   
 const initialState = {
   user: null,
@@ -26,7 +26,7 @@ export const signupUser = createAsyncThunk(
   "user/signupUser",
   async (data, thunkAPI) => {
     try {
-      const res = await useInsertData("User/Auth/Register", data);
+      const res = await useInsertDataWithImage("User/Auth/Register", data);
       return res;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.response);

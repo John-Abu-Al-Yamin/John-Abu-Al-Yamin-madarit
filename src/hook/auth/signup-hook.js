@@ -12,6 +12,11 @@ const signupHook = () => {
   const [full_name, setfull_name] = useState('');
   const [phone, setPhone] = useState('');
   const [password_confirmation, setpassword_confirmation] = useState('');
+  const [address, setAddress] = useState('');
+  const [nationality, setNationality] = useState('');
+  const [passport, setPassport] = useState('');
+  const [ipAddress, setIpAddress] = useState('');
+
   const [loading, setLoading] = useState(false);
   const [isPress, setIsPress] = useState(false);
 
@@ -19,11 +24,15 @@ const signupHook = () => {
   const onChangeEmail = (e) => setEmail(e.target.value);
   const onChangePassword = (e) => setPassword(e.target.value);
   const onChangePasswordConfirm = (e) => setpassword_confirmation(e.target.value);
+  const onChangeAddress = (e) => setAddress(e.target.value);
+  const onChangeNationality = (e) => setNationality(e.target.value);
+  const onChangePassport = (e) => setPassport(e.target.value);
+  const onChangeIpAddress = (e) => setIpAddress(e.target.value);
   const onChangePhone = (e) => setPhone(e.target.value);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (full_name === '' || email === '' || password === '' || password_confirmation === '') {
+    if (full_name === '' || email === '' || password === '' || password_confirmation === '',ipAddress==='',phone==='',nationality==='' ) {
       toast.error("Please complete your data");
       return;
     }
@@ -35,7 +44,18 @@ const signupHook = () => {
     setIsPress(true);
     setLoading(true);
 
-    await dispatch(signupUser({ email, password, full_name, phone,password_confirmation }));
+    await dispatch(signupUser({
+       email,
+       password,
+       full_name,
+       phone,
+      password_confirmation,
+      address,
+      nationality,
+      passport,
+      ipAddress,
+      userType: "user"
+    }));
 
     setLoading(false);
     setIsPress(false);
@@ -69,6 +89,10 @@ console.log(res)
     password,
     full_name,
     password_confirmation,
+    address,
+nationality,
+passport,
+ipAddress,
     loading,
     isPress,
     onChangeName,
@@ -76,8 +100,13 @@ console.log(res)
     onChangePassword,
     onChangePasswordConfirm,
     onChangePhone,
+    onChangeAddress,
+onChangeNationality,
+onChangePassport,
+onChangeIpAddress,
     phone,
     onSubmit,
+
   };
 };
 
