@@ -2,35 +2,11 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { all_routes } from '../../feature-module/router/all_routes';
 import ImageWithBasePath from '../../core/common/imageWithBasePath';
-import signupHook from '../../hook/auth/signup-hook';
-  type PasswordField = "password" | "confirmPassword";
+   type PasswordField = "password" | "confirmPassword";
 
  const Register = () => {
 
-  const {
-    email,
-       password,
-       full_name,
-       password_confirmation,
-       address,
-   nationality,
-   passport,
-   ipAddress,
-       loading,
-       isPress,
-       onChangeName,
-       onChangeEmail,
-       onChangePassword,
-       onChangePasswordConfirm,
-       onChangePhone,
-       onChangeAddress,
-   onChangeNationality,
-   onChangePassport,
-   onChangeIpAddress,
-       phone,
-       onSubmit,
-   
-} = signupHook();
+  
   const routes = all_routes
   const [passwordVisibility, setPasswordVisibility] = useState({
     password: false,
@@ -64,7 +40,7 @@ import signupHook from '../../hook/auth/signup-hook';
                 </div>
            </div>
               <div className="card-body">
-                <form onSubmit={onSubmit}>
+                <form >
                   <div className="mb-3">
                     <label className="form-label">Name</label>
                     <div className="input-icon">
@@ -75,8 +51,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Enter Full Name"
-                        value={full_name}
-                        onChange={onChangeName}
+                         
                       />
                     </div>
                   </div>
@@ -90,8 +65,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="email"
                         className="form-control form-control-lg"
                         placeholder="Enter Email"
-                        value={email}
-                        onChange={onChangeEmail}
+                        
                       />
                     </div>
                     <div className="input-icon">
@@ -102,8 +76,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Enter nationality"
-                        value={nationality}
-                        onChange={onChangeNationality}
+                        
                       />
                     </div>
                     <div className="input-icon">
@@ -114,8 +87,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Enter address"
-                        value={address}
-                        onChange={onChangeAddress}
+                         
                       />
                     </div>
                     <div className="input-icon">
@@ -126,8 +98,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="number"
                         className="form-control form-control-lg"
                         placeholder="Enter ipAddress"
-                        value={ipAddress}
-                        onChange={onChangeIpAddress}
+                        
                       />
                     </div>
                     <div className="input-icon">
@@ -138,8 +109,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="tel"
                         className="form-control form-control-lg"
                         placeholder="Enter phone"
-                        value={phone}
-                        onChange={onChangePhone}
+  
                       />
                     </div>
                     <div className="input-icon">
@@ -150,8 +120,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         type="file"
                         className="form-control form-control-lg"
                         placeholder="Enter passport"
-                        value={passport}
-                        onChange={onChangePassport }
+                        
                       />
                     </div>
                   </div>
@@ -169,8 +138,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         }
                         className="pass-input form-control"
                          placeholder='Enter Password'
-                         value={password}
-                                onChange={onChangePassword}
+                         
                       />
                       <span
                         className={`isax toggle-passwords ${passwordVisibility.password
@@ -197,8 +165,7 @@ import signupHook from '../../hook/auth/signup-hook';
                         }
                         className="pass-input form-control"
                          placeholder='Enter Password'
-                         value={password_confirmation}
-                         onChange={onChangePasswordConfirm}
+                         
                       />
                       <span
                         className={`isax toggle-passwords ${passwordVisibility.confirmPassword

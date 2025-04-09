@@ -1,63 +1,60 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ImageWithBasePath from "../imageWithBasePath";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import LoginHook from "../../../hook/auth/login-hook";
 
 const LoginModal = () => {
+  const [phoneEmail, password, loading, onChangeEmail, onChangePassword, onSubmit]=LoginHook();
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
-  const [formData, setFormData] = useState({
-    phoneEmail: "",
-    password: "",
-  });
-  const [isLoading, setLoading] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   phoneEmail: "",
+  //   password: "",
+  // });
+  // const [isLoading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  // };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      setLoading(true);
-      axios
-        .post("https://back.safewayeg.xyz/api/Auth/Login", formData)
-        .then((response) => {
-          if (response.status === 200) {
-            localStorage.setItem("token", response.data.data.access_token);
-            console.log("Login successful:", response.data.data.access_token);
-            toast.success(`Login successful`);
-          } else {
-            console.error("Login failed:", response.data);
-            toast.error(`Login failed. Please check your credentials.`);
-          }
-        })
-        .catch((error) => {
-          // Handling Axios error
-          console.error("Error during request:", error);
-          toast.error("An error occurred. Please try again later.");
-        });
-    } catch (error) {
-      // General error handler
-      console.error("Unexpected error:", error);
-      toast.error("An unexpected error occurred.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  
+  //   try {
+  //     const response = await axiosInstance.post("/Auth/Login", formData); 
+  
+  //     if (response.status === 200) {
+  //       localStorage.setItem("token", response.data.data.access_token);
+  //       console.log("Login successful:", response.data.data.access_token);
+  //       toast.success("Login successful");
+  //     } else {
+  //       console.error("Login failed:", response.data);
+  //       toast.error("Login failed. Please check your credentials.");
+  //     }
+  //   } catch (error: any) {
+  //     if (error.response) {
+  //       console.error("Error during request:", error.response.data);
+  //       toast.error(error.response.data.message || "An error occurred. Please try again later.");
+  //     } else {
+  //       console.error("Unexpected error:", error);
+  //       toast.error("An unexpected error occurred.");
+  //     }
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const togglePasswordVisibility = () => {
     setPasswordVisible((prevState) => !prevState);
   };
   return (
     <>
-      <ToastContainer />
-      {/* Login Modal */}
+       {/* Login Modal */}
       <div className="modal fade" id="login-modal">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
@@ -67,7 +64,7 @@ const LoginModal = () => {
               </Link>
             </div>
             <div className="modal-body p-4 pt-0">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={onSubmit}>
                 <div className="text-center mb-3">
                   <h5 className="mb-1">Sign In</h5>
                   <p>Sign in to Start Manage your DreamsTour Account</p>
@@ -83,8 +80,8 @@ const LoginModal = () => {
                       name="phoneEmail"
                       className="form-control form-control-lg"
                       placeholder="Enter Email"
-                      value={formData.phoneEmail}
-                      onChange={handleChange}
+                      value={phoneEmail}
+                      onChange={onChangeEmail}
                     />
                   </div>
                 </div>
@@ -100,8 +97,8 @@ const LoginModal = () => {
                       className="form-control form-control-lg pass-input"
                       placeholder="Enter Password"
                       name="password"
-                      value={formData.password}
-                      onChange={handleChange}
+                      value={password}
+                      onChange={onChangePassword}
                     />
                     <span
                       className={`input-icon-addon toggle-password`}
@@ -144,11 +141,11 @@ const LoginModal = () => {
                 <div className="mb-3">
                   <button
                     type="submit"
-                    disabled={isLoading}
+                    disabled={loading}
                     data-bs-dismiss="modal"
                     className="btn btn-xl btn-primary d-flex align-items-center justify-content-center w-100"
                   >
-                    {isLoading ? "Logging in..." : "Login"}
+                    {loading ? "Logging in..." : "Login"}
                     <i className="isax isax-arrow-right-3 ms-2" />
                   </button>
                 </div>
