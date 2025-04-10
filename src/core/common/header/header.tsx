@@ -194,18 +194,13 @@ const Header = () => {
     <>
       <div
         className={`main-header ${
-          location.pathname === "/index-2" ||
-          location.pathname === "/index-4" ||
           location.pathname === "/index-6"
             ? "main-header-four"
             : ""
         } `}
       >
         {/* Header Topbar*/}
-        {location.pathname === "/index-2" ||
-        location.pathname === "/index-3" ||
-        location.pathname === "/index-4" ||
-        location.pathname === "/index-5" ||
+        {/* {
         location.pathname === "/index-6" ? (
           <></>
         ) : (
@@ -314,13 +309,13 @@ const Header = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         {location.pathname === "/index-6" && (
           <div className="header-topbar header-top-six text-center bg-transparent">
             <div className="container">
               <div className="d-flex align-items-center justify-content-between flex-wrap">
-                <div className="d-flex align-items-center flex-wrap">
+                {/* <div className="d-flex align-items-center flex-wrap">
                   <p className="d-flex align-items-center fs-14 mb-2 me-3 ">
                     <i className="isax isax-call5 me-2" />
                     Toll Free : +1 56565 56594
@@ -329,7 +324,7 @@ const Header = () => {
                     <i className="isax isax-message-text-15 me-2" />
                     Email : info@example.com
                   </p>
-                </div>
+                </div> */}
                 <div className="navbar-logo mb-2">
                   <Link className="logo-dark header-logo" to={routes.home6}>
                     <ImageWithBasePath
@@ -346,6 +341,7 @@ const Header = () => {
                     />
                   </Link>
                 </div>
+                
                 <div className="d-flex align-items-center">
                   <div className="dropdown mb-2 me-3">
                     <Link
