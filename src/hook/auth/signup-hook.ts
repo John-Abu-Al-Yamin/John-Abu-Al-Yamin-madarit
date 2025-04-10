@@ -80,14 +80,12 @@ const signupHook = () => {
     if (!loading && res) {
       if (res?.data?.data?.access_token) {
         localStorage.setItem("token", res.data.data.access_token);
-        localStorage.setItem("user", JSON.stringify(res.data.data));
-        // setTimeout(() => {
-        //   window.location.href = "/";
-        // }, 1500);
+         setTimeout(() => {
+          window.location.href = "/";
+        }, 1500);
       } else {
         localStorage.removeItem("token");
-        localStorage.removeItem("user");
-
+ 
         if (res?.data?.message) {
           toast.error(res.data.message);
         }

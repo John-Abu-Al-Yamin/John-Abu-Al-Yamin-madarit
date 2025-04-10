@@ -64,16 +64,16 @@ const LoginHook = (): [
     if (!loading && res) {
       if ((res as any)?.access_token) {
         localStorage.setItem('token', (res as any).access_token);
-        localStorage.setItem('user', JSON.stringify(res));
+         setTimeout(() => {
+          window.location.href = "/";
+        }, 1500);
       } else {
         localStorage.removeItem('token');
-        localStorage.removeItem('user');
-      }
+       }
 
       if ((res as any)?.message === 'Incorrect email or password') {
         localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        toast.error('Incorrect email or password');
+         toast.error('Incorrect email or password');
       }
 
       setLoading(true);

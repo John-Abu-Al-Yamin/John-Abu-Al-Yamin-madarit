@@ -1,6 +1,6 @@
 import { DatePicker, TimePicker } from "antd";
 import dayjs from "dayjs";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DestinationSection from "./destinationSection";
 import PlaceSection from "./placeSection";
 import ProviderSlick from "./providerSection";
@@ -10,10 +10,25 @@ import ImageWithBasePath from "../../core/common/imageWithBasePath";
 import FooterSix from "./footer";
 import BannerCounter from "./counter";
 import { all_routes } from "../router/all_routes";
+import { useDispatch, useSelector } from "react-redux";
+import { getSlider } from "../../core/redux/homeSlice";
+import { AppDispatch, RootState } from "../../core/redux/store";
 
 const HomeSix = () => {
   const routes = all_routes;
 
+
+  const dispatch = useDispatch<AppDispatch>();
+  
+  useEffect(() => {
+    const get = async() =>{
+       await dispatch(getSlider())
+    }
+  
+    get();
+   }, [dispatch]);
+   const slider = useSelector((state: RootState) => state.home.slider)
+console.log(slider)
   const [flightRadio, setFlightRadio] = useState<string>("oneway");
   const [defaultDate] = useState(dayjs());
   const defaultTime = dayjs("10:30 AM", "h:mm A");

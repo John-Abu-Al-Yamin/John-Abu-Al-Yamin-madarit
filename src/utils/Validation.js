@@ -27,16 +27,17 @@ export const registerSchema = Yup.object().shape({
 });
 
 export const loginSchema = Yup.object().shape({
-  email: Yup.string()
+  phoneEmail: Yup.string()
     .required("الإيميل أو رقم الموبايل مطلوب")
     .test(
       "is-email-or-phone",
       "يرجى إدخال بريد إلكتروني صحيح أو رقم موبايل صحيح",
       function (value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const phoneRegex = /^\+?[0-9]{7,15}$/; // يقبل أرقام من 7 لـ 15 رقم، مع أو بدون +
+        const phoneRegex = /^\+?[0-9]{7,15}$/;
+        const isPhone = phoneRegex.test(value || "");
+        const isEmail = Yup.string().email().isValidSync(value || "");
 
-        return emailRegex.test(value) || phoneRegex.test(value);
+        return isPhone || isEmail;
       }
     ),
 
@@ -45,9 +46,5 @@ export const loginSchema = Yup.object().shape({
     .matches(/[A-Z]/, "كلمة المرور يجب أن تحتوي على حرف كبير واحد على الأقل")
     .matches(/[a-z]/, "كلمة المرور يجب أن تحتوي على حرف صغير واحد على الأقل")
     .matches(/[0-9]/, "كلمة المرور يجب أن تحتوي على رقم واحد على الأقل")
-    .matches(
-      /[$&+,:;=?@#|'<>.^*()%!-]/,
-      "كلمة المرور يجب أن تحتوي على رمز خاص مثل $ أو &"
-    )
     .required("كلمة المرور مطلوبة"),
 });
