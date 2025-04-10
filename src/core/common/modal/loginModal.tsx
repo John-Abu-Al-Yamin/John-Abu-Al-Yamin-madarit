@@ -142,7 +142,7 @@ const LoginModal = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    data-bs-dismiss="modal"
+                    // data-bs-dismiss="modal"
                     className="btn btn-xl btn-primary d-flex align-items-center justify-content-center w-100"
                   >
                     {loading ? "Logging in..." : "Login"}

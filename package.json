@@ -19,6 +19,7 @@
     "aos": "^2.3.4",
     "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
+    "formik": "^2.4.6",
     "moment": "^2.30.1",
     "primereact": "^10.9.1",
     "react": "^19.0.0",
@@ -45,7 +46,8 @@
     "slick-carousel": "^1.8.1",
     "typescript": "^4.4.2",
     "web-vitals": "^4.2.4",
-    "yet-another-react-lightbox": "^3.21.7"
+    "yet-another-react-lightbox": "^3.21.7",
+    "yup": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",

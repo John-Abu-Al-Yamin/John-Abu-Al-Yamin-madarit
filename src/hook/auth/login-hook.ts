@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { loginUser } from '../../core/redux/auth/authSlice';
 import { AppDispatch, RootState } from '../../core/redux/store';
- 
+
 const LoginHook = (): [
   string,
   string,
@@ -39,10 +39,23 @@ const LoginHook = (): [
     setIsPress(true);
     setLoading(true);
 
-    await dispatch(loginUser({ phoneEmail, password }));
-    toast.success("Login successful");
-    setLoading(false);
-    setIsPress(false);
+    try {
+      // Dispatch login action
+      await dispatch(loginUser({ phoneEmail, password }));
+      
+    } catch (error: any) {
+      // Check if error is a known error type (400, 404)
+      if (error?.response?.status === 400) {
+        toast.error('Bad request: Please check your email or password');
+      } else if (error?.response?.status === 404) {
+        toast.error('Not found: User not found');
+      } else {
+        toast.error('An error occurred. Please try again.');
+      }
+    } finally {
+      setLoading(false);
+      setIsPress(false);
+    }
   };
 
   const res = useSelector((state: RootState) => state.auth.user);
@@ -52,10 +65,6 @@ const LoginHook = (): [
       if ((res as any)?.access_token) {
         localStorage.setItem('token', (res as any).access_token);
         localStorage.setItem('user', JSON.stringify(res));
-
-        // setTimeout(() => {
-        //   window.location.href = '/';
-        // }, 1500);
       } else {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
@@ -75,11 +84,3 @@ const LoginHook = (): [
 };
 
 export default LoginHook;
-
-
-
-// const LoginHook = () => {
-  
-// }
-
-// export default LoginHook

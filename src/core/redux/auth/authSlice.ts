@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../../Api/axiosInstance";
 import { AxiosError } from "axios";
+import { toast } from "react-toastify";
 
 // =================== Types ===================
 
@@ -80,10 +81,19 @@ const authSlice = createSlice({
     builder.addCase(loginUser.fulfilled, (state, action: PayloadAction<User>) => {
       state.user = action.payload;
     });
+    builder.addCase(loginUser.rejected, (state, action) => {
+      // Handling rejected action
+      if (action.payload) {
+        // Handle error message for failed login
+        toast.error(action.payload?.message || 'Login failed, try again');
+      }
+    });
+
 
     builder.addCase(signupUser.fulfilled, (state, action: PayloadAction<User>) => {
       state.user = action.payload;
     });
+    
   },
 });
 
