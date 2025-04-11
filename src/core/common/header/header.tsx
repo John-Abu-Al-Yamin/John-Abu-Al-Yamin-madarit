@@ -191,7 +191,7 @@ const Header = () => {
   const token = localStorage.getItem("token");
 
   return (
-    <>
+    <div style={{ overflowX: "hidden" }}>
       <div
         className={`main-header ${
           location.pathname === "/index-6"
@@ -1053,7 +1053,7 @@ const Header = () => {
       <RegisterModal />
       <ForgotPasswordModal />
       <ChangePasswordModal />
-    </>
+    </div>
   );
 };
 
