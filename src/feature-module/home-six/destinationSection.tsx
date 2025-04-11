@@ -45,9 +45,9 @@ const DestinationSection = () => {
     return (
         <>
             {/* Destination Section */}
-            <section className="section destination-section">
+            <section className="section destination-section mt-4">
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center mt-4">
                         <div className="col-md-8 aos" data-aos="fade-up">
                             <div className="section-header-six">
                                 <span className="badge badge-soft-primary rounded-pill mb-1">

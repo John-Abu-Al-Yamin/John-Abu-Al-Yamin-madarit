@@ -128,7 +128,7 @@ const HomeSix = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section hero-sec-two">
+      <section className="hero-section hero-sec-two ">
         <div className="banner-sliders">
           <div className="slider-wrap home-vertical-slider">
             <Slider
@@ -2494,10 +2494,13 @@ const HomeSix = () => {
           </div>
         </div>
       </section>
+      {/* /Benefit Section */}
+<PlaceSection />
       {/* /About Section */}
 
       <ProviderSlick />
-
+{/* /Benefit Section */}
+<PlaceSection />
       {/* Testimonials Section */}
       <section className="section testi-sec-six pb-0">
         <div className="container">
@@ -2828,7 +2831,8 @@ const HomeSix = () => {
         </div>
       </section>
       {/* /Experts Section */}
-
+{/* /Benefit Section */}
+<PlaceSection />
       {/* Blog Section */}
       <section className="section blog-section blog-sec-six">
         <div className="container">

@@ -199,24 +199,31 @@ const Header = () => {
             : ""
         } `}
       >
-        {/* Header Topbar*/}
-        {/* {
-        location.pathname === "/index-6" ? (
-          <></>
-        ) : (
-          <div className="header-topbar text-center bg-transparent">
+      
+        {location.pathname === "/index-6" && (
+          <div className="header-topbar header-top-six text-center bg-transparent">
             <div className="container">
               <div className="d-flex align-items-center justify-content-between flex-wrap">
-                <p className="d-flex align-items-center fw-medium fs-14 mb-2">
-                  <i className="isax isax-call5 me-2" />
-                  Toll Free : +1 56565 56594
-                </p>
-                <div className="d-flex align-items-center">
-                  <p className="mb-2 me-3 d-flex align-items-center fw-medium fs-14">
-                    <i className="isax isax-message-text-15 me-2" />
-                    Email : info@example.com
-                  </p>
-                  <div className="dropdown flag-dropdown mb-2 me-3">
+                
+                <div className="navbar-logo mb-2">
+                  <Link className="logo-dark header-logo" to={routes.home6}>
+                    <ImageWithBasePath
+                      src="assets/img/logo-dark.svg"
+                      className="logo"
+                      alt="Logo"
+                    />
+                  </Link>
+                  <Link className="logo-white header-logo" to={routes.home6}>
+                    <ImageWithBasePath
+                      src="assets/img/logo.svg"
+                      className="logo"
+                      alt="Logo"
+                    />
+                  </Link>
+                </div>
+                  
+                 <div className="d-flex align-items-center">
+                <div className="dropdown flag-dropdown mb-2 me-3">
                     <Link
                       to="#"
                       className="dropdown-toggle d-inline-flex align-items-center"
@@ -297,78 +304,6 @@ const Header = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="fav-dropdown mb-2">
-                    <Link to={routes.wishlist} className="position-relative">
-                      <i className="isax isax-heart" />
-                      <span className="count-icon bg-secondary text-gray-9">
-                        0
-                      </span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )} */}
-
-        {location.pathname === "/index-6" && (
-          <div className="header-topbar header-top-six text-center bg-transparent">
-            <div className="container">
-              <div className="d-flex align-items-center justify-content-between flex-wrap">
-                {/* <div className="d-flex align-items-center flex-wrap">
-                  <p className="d-flex align-items-center fs-14 mb-2 me-3 ">
-                    <i className="isax isax-call5 me-2" />
-                    Toll Free : +1 56565 56594
-                  </p>
-                  <p className="mb-2 d-flex align-items-center fs-14">
-                    <i className="isax isax-message-text-15 me-2" />
-                    Email : info@example.com
-                  </p>
-                </div> */}
-                <div className="navbar-logo mb-2">
-                  <Link className="logo-dark header-logo" to={routes.home6}>
-                    <ImageWithBasePath
-                      src="assets/img/logo-dark.svg"
-                      className="logo"
-                      alt="Logo"
-                    />
-                  </Link>
-                  <Link className="logo-white header-logo" to={routes.home6}>
-                    <ImageWithBasePath
-                      src="assets/img/logo.svg"
-                      className="logo"
-                      alt="Logo"
-                    />
-                  </Link>
-                </div>
-                
-                <div className="d-flex align-items-center">
-                  <div className="dropdown mb-2 me-3">
-                    <Link
-                      to="#"
-                      className="dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                    >
-                      USD
-                    </Link>
-                    <ul className="dropdown-menu p-2 mt-2">
-                      <li>
-                        <Link className="dropdown-item rounded" to="#">
-                          USD
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item rounded" to="#">
-                          YEN
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item rounded" to="#">
-                          EURO
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                   <DarkButton />
                   <div className="fav-dropdown  me-3">
                     <Link to={routes.wishlist} className="position-relative">
@@ -396,16 +331,22 @@ const Header = () => {
                         Sign In
                       </Link>
                     )}
-                   
+                    
                   </div>
+                  {/* <Link
+                        to={routes.becomeAnExpert}
+                        className="btn btn-primary w-100"
+                      >
+                        Become Expert
+                      </Link> */}
                 </div>
               </div>
             </div>
           </div>
         )}
         {/* /Header Topbar*/}
-        {/* Header */}
-        <header
+      {/* Header */}
+      <header
           className={`${scrolled ? "fixed" : ""} ${
             location.pathname === "/index-2" && "header-four"
           } ${location.pathname === "/index-3" && "header-three"} ${
@@ -756,41 +697,19 @@ const Header = () => {
               <div className="main-menu-wrapper">
                 <div className="navbar-logo">
                   <Link className="logo-white header-logo" to={routes.home6}>
-                    {location.pathname === "/index-2" ||
-                    location.pathname === "/index-3" ||
-                    location.pathname === "/index-4" ||
-                    location.pathname === "/index-5" ? (
-                      <ImageWithBasePath
-                        src="assets/img/logo-dark.svg"
-                        className="logo"
-                        alt="Logo"
-                      />
-                    ) : (
-                      <ImageWithBasePath
+                  <ImageWithBasePath
                         src="assets/img/logo.svg"
                         className="logo"
                         alt="Logo"
                       />
-                    )}
                   </Link>
                   {location.pathname !== routes.home6 && (
                     <Link className="logo-dark header-logo" to={routes.home6}>
-                      {location.pathname === "/index-2" ||
-                      location.pathname === "/index-3" ||
-                      location.pathname === "/index-4" ||
-                      location.pathname === "/index-5" ? (
-                        <ImageWithBasePath
-                          src="assets/img/logo.svg"
-                          className="logo"
-                          alt="Logo"
-                        />
-                      ) : (
-                        <ImageWithBasePath
+                      <ImageWithBasePath
                           src="assets/img/logo-dark.svg"
                           className="logo"
                           alt="Logo"
                         />
-                      )}
                     </Link>
                   )}
                 </div>
@@ -1041,260 +960,7 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
-                {location.pathname === "/index" ? (
-                  <div className="header-btn d-flex align-items-center">
-                    <DarkButton />
-                    <div>
-                      <Link
-                        to="#"
-                        className="btn btn-white me-3"
-                        data-bs-toggle="modal"
-                        data-bs-target="#login-modal"
-                      >
-                        Sign In
-                      </Link>
-                    </div>
-                    <Link
-                      to={routes.becomeAnExpert}
-                      className="btn btn-primary me-0"
-                    >
-                      Become Expert
-                    </Link>
-                    <div className="header__hamburger d-xl-none my-auto">
-                      <div
-                        className="sidebar-menu"
-                        onClick={() => setIsOffcanva(true)}
-                      >
-                        <i className="isax isax-menu5" />
-                      </div>
-                    </div>
-                  </div>
-                ) : location.pathname === "/index-2" ? (
-                  <div className="header-btn d-flex align-items-center">
-                    <div className="dropdown flag-dropdown me-3">
-                      <Link
-                        to="#"
-                        className="d-inline-flex align-items-center"
-                        data-bs-toggle="dropdown"
-                      >
-                        <ImageWithBasePath
-                          src="assets/img/flags/us-flag.svg"
-                          alt="flag"
-                        />
-                      </Link>
-                      <ul className="dropdown-menu p-2 mt-2">
-                        <li>
-                          <Link
-                            className="dropdown-item rounded d-flex align-items-center"
-                            to="#"
-                          >
-                            <ImageWithBasePath
-                              src="assets/img/flags/us-flag.svg"
-                              className="me-2"
-                              alt="flag"
-                            />
-                            ENG
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item rounded d-flex align-items-center"
-                            to="#"
-                          >
-                            <ImageWithBasePath
-                              src="assets/img/flags/arab-flag.svg"
-                              className="me-2"
-                              alt="flag"
-                            />
-                            ARA
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="dropdown-item rounded d-flex align-items-center"
-                            to="#"
-                          >
-                            <ImageWithBasePath
-                              src="assets/img/flags/france-flag.svg"
-                              className="me-2"
-                              alt="flag"
-                            />
-                            FRE
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="dropdown me-3">
-                      <Link
-                        to="#"
-                        className="dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                      >
-                        USD
-                      </Link>
-                      <ul className="dropdown-menu p-2 mt-2">
-                        <li>
-                          <Link className="dropdown-item rounded" to="#">
-                            USD
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item rounded" to="#">
-                            YEN
-                          </Link>
-                        </li>
-                        <li>
-                          <Link className="dropdown-item rounded" to="#">
-                            EURO
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="me-3">
-                      <Link to={routes.userDashboard}>
-                        <i className="isax isax-user" />
-                      </Link>
-                    </div>
-                    <DarkButton />
-                    <div className="fav-dropdown me-3">
-                      <Link to={routes.wishlist} className="position-relative">
-                        <i className="isax isax-heart" />
-                        <span className="count-icon bg-secondary text-gray-9">
-                          0
-                        </span>
-                      </Link>
-                    </div>
-                    <Link
-                      to={routes.becomeAnExpert}
-                      className="btn btn-primary"
-                    >
-                      Become Expert
-                    </Link>
-                    <div className="header__hamburger d-xl-none my-auto">
-                      <div
-                        className="sidebar-menu"
-                        onClick={() => setIsOffcanva(true)}
-                      >
-                        <i className="isax isax-menu5" />
-                      </div>
-                    </div>
-                  </div>
-                ) : location.pathname === "/index-3" ? (
-                  <div className="header-btn d-flex align-items-center">
-                    <div className="cart-dropdown me-3">
-                      <Link
-                        to={routes.userDashboard}
-                        className="position-relative"
-                      >
-                        <i className="isax isax-user" />
-                      </Link>
-                    </div>
-                    <DarkButton />
-                    <div className="fav-dropdown me-3">
-                      <Link to={routes.wishlist} className="position-relative">
-                        <i className="isax isax-heart" />
-                        <span className="count-icon bg-secondary text-gray-9">
-                          0
-                        </span>
-                      </Link>
-                    </div>
-                    <div>
-                      <Link
-                        to="#"
-                        className="text-white fs-13 btn btn-dark btn-md"
-                        data-bs-toggle="modal"
-                        data-bs-target="#login-modal"
-                      >
-                        Sign In
-                      </Link>
-                    </div>
-                    <div className="header__hamburger d-xl-none my-auto">
-                      <div
-                        className="sidebar-menu"
-                        onClick={() => setIsOffcanva(true)}
-                      >
-                        <i className="isax isax-menu5" />
-                      </div>
-                    </div>
-                  </div>
-                ) : location.pathname === "/index-4" ? (
-                  <>
-                    <div className="header-btn d-flex align-items-center">
-                      <DarkButton />
-                      <div className="fav-dropdown me-3">
-                        <Link
-                          to={routes.wishlist}
-                          className="position-relative"
-                        >
-                          <i className="isax isax-heart" />
-                          <span className="count-icon bg-secondary text-gray-9">
-                            0
-                          </span>
-                        </Link>
-                      </div>
-                      {/* <Link
-                              to={routes.addFlight}
-                              className="btn btn-dark d-inline-flex align-items-center me-3"
-                            >
-                              <i className="isax isax-lock me-2" />
-                              Add Your Listing
-                            </Link> */}
-                      <Link
-                        to={routes.register}
-                        className="btn btn-dark d-inline-flex align-items-center me-0"
-                      >
-                        <i className="isax isax-lock me-2" />
-                        Sign Up
-                      </Link>
-                      <div className="header__hamburger d-xl-none my-auto">
-                        <div
-                          className="sidebar-menu"
-                          onClick={() => setIsOffcanva(true)}
-                        >
-                          <i className="isax isax-menu5" />
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                ) : location.pathname === "/index-5" ? (
-                  <div className="header-btn d-flex align-items-center">
-                    <div className="cart-dropdown me-3">
-                      <Link
-                        to={routes.userDashboard}
-                        className="position-relative"
-                      >
-                        <i className="isax isax-user" />
-                      </Link>
-                    </div>
-                    <DarkButton />
-                    <div className="fav-dropdown me-3">
-                      <Link to={routes.wishlist} className="position-relative">
-                        <i className="isax isax-heart" />
-                        <span className="count-icon bg-secondary text-gray-9">
-                          0
-                        </span>
-                      </Link>
-                    </div>
-                    <div>
-                      <Link
-                        to="#"
-                        className="text-white btn btn-dark w-100"
-                        data-bs-toggle="modal"
-                        data-bs-target="#login-modal"
-                      >
-                        Sign In
-                      </Link>
-                    </div>
-                    <div className="header__hamburger d-xl-none my-auto">
-                      <div
-                        className="sidebar-menu"
-                        onClick={() => setIsOffcanva(true)}
-                      >
-                        <i className="isax isax-menu5" />
-                      </div>
-                    </div>
-                  </div>
-                ) : location.pathname === "/index-6" ? (
+                { location.pathname === "/index-6" ? (
                   <div className="header__hamburger d-xl-none my-auto">
                     <div
                       className="sidebar-menu"
