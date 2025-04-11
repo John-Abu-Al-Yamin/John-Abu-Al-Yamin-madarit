@@ -25,7 +25,7 @@ const routes = all_routes;
             <div className="card-header">
               <div className="text-center">
                 <h5 className="mb-1">Sign In</h5>
-                <p>Sign in to Start Manage your DreamsTour Account</p>
+                <p>Sign in to Start Manage your City Scanner Account</p>
               </div>
             </div>
             <div className="card-body">

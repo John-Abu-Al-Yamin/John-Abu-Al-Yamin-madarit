@@ -31,7 +31,7 @@ const AuthFeature = () => {
             <Outlet />
           </div>
           <div className="coprright-footer">
-            <p className="fs-14">Copyright &copy; 2025. All Rights Reserved, <Link to="#" className="text-primary fw-medium">DreamsTour</Link></p>
+            <p className="fs-14">Copyright &copy; 2025. All Rights Reserved, <Link to="#" className="text-primary fw-medium">City Scanner</Link></p>
           </div>
         </div>}
 

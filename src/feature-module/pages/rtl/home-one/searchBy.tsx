@@ -80,7 +80,7 @@ const SearchBy = () => {
               Around the World{" "}
             </h2>
             <p className="sub-title">
-              DreamsTour Marketplace is a platform designed to connect fans with
+              City Scanner Marketplace is a platform designed to connect fans with
               exclusive experiences related to a specific tour
             </p>
           </div>

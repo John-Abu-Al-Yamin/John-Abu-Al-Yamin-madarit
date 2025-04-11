@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
                 <div className="container">
                     {/* Privacy Policy */}
                     <p>
-                        At Travel DreamsTour, your privacy is important to us. This Privacy
+                        At Travel City Scanner, your privacy is important to us. This Privacy
                         Policy outlines how we collect, use, disclose, and protect your personal
                         information when you use our website and services.
                     </p>

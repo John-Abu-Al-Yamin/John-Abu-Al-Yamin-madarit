@@ -36,7 +36,7 @@ import ImageWithBasePath from '../../core/common/imageWithBasePath';
               <div className="card-header">
                 <div className="text-center">
                   <h5 className="mb-1">Sign Up</h5>
-                  <p>Create your DreamsTour Account</p>
+                  <p>Create your City Scanner Account</p>
                 </div>
            </div>
               <div className="card-body">

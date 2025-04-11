@@ -41,7 +41,7 @@ const TestimonialSection = () => {
             <div className="col-xl-6 col-lg-10 text-center wow fadeInUp" data-wow-delay="0.2s">
                 <div className="section-header text-center">
                     <h2 className="mb-2">What’s Our <span className="text-primary  text-decoration-underline">User</span> Says</h2>
-                    <p className="sub-title">DreamsTour, a tour operator specializing in dream destinations, offers a variety of benefits for travelers.</p>
+                    <p className="sub-title">City Scanner, a tour operator specializing in dream destinations, offers a variety of benefits for travelers.</p>
                 </div>
             </div>
         </div>

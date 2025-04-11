@@ -40,7 +40,7 @@ const AboutSection = () => {
                     </div>
                     <div className="col-lg-6">
                         <div className="about-content">
-                            <h6 className="text-primary fs-14 fw-medium mb-2">About DreamsTour</h6>
+                            <h6 className="text-primary fs-14 fw-medium mb-2">About City Scanner</h6>
                             <h2 className="display-6 mb-2">Explore Beyond the Horizon: Discover the World’s Wonders</h2>
                             <p className="mb-4">We pride themselves on offering personalized services for high-end clientele, with a commitment to crafting unique and unforgettable travel experiences​</p>
                             <div className="d-flex align-items-center mb-4">

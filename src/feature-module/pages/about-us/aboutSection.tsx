@@ -50,13 +50,13 @@ const AboutSection = () => {
                         <div className="col-lg-6">
                             <div className="about-content mb-4">
                                 <h6 className="text-primary fs-14 fw-medium mb-2">
-                                    About DreamsTour
+                                    About City Scanner
                                 </h6>
                                 <h2 className="display-6 mb-2">
                                     All-in-one platform for unforgettable travel experiences!
                                 </h2>
                                 <p className="mb-4">
-                                    At DreamsTour, we believe that travel should be simple, seamless,
+                                    At City Scanner, we believe that travel should be simple, seamless,
                                     and tailored to your needs. Whether you're dreaming of an exotic
                                     beach getaway, a cultural city tour, or a luxury cruise, we are
                                     here to turn your travel dreams into reality.

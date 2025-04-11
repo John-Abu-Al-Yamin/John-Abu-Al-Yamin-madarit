@@ -18,7 +18,7 @@ const ForgotPassword = () => {
             <div className="card-header">
               <div className="text-center">
                 <h5 className="mb-1">Forgot Password</h5>
-                <p>Reset Your DreamsTour Password</p>
+                <p>Reset Your City Scanner Password</p>
               </div>
             </div>
             <div className="card-body">

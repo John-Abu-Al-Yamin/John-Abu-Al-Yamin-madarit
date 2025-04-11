@@ -49,7 +49,7 @@ const RegisterModal = () => {
               <form onSubmit={onSubmit}>
                 <div className="text-center border-bottom mb-3">
                   <h5 className="mb-1">Sign Up</h5>
-                  <p className="mb-3">Create your DreamsTour </p>
+                  <p className="mb-3">Create your City Scanner </p>
                 </div>
                 <div className="mb-2">
                   <label className="form-label">Name</label>
@@ -383,7 +383,7 @@ export default RegisterModal;
 //               <form onSubmit={handleSubmit}>
 //                 <div className="text-center border-bottom mb-3">
 //                   <h5 className="mb-1">Sign Up</h5>
-//                   <p className="mb-3">Create your DreamsTour </p>
+//                   <p className="mb-3">Create your City Scanner </p>
 //                 </div>
 //                 <div className="mb-2">
 //                   <label className="form-label">Name</label>
