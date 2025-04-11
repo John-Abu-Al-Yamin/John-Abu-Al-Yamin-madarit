@@ -209,7 +209,7 @@ const HomeSix = () => {
               <div className="col-md-12 mx-auto aos" data-aos="fade-up">
                 <div className="banner-content text-start">
                   <h1 className="text-white display-5 mb-2">
-                    Experience the Magic: Exclusive Offers from DreamsTour
+                    Experience the Magic: Exclusive Offers from City Scanner
                   </h1>
                   <p className="text-white">
                     Your ultimate destination for all things help you celebrate

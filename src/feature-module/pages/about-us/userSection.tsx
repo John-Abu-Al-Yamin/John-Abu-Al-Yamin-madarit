@@ -58,7 +58,7 @@ const UserSection = () => {
                                     Says
                                 </h2>
                                 <p className="sub-title">
-                                    DreamsTour, a tour operator specializing in dream destinations,
+                                    City Scanner, a tour operator specializing in dream destinations,
                                     offers a variety of benefits for travelers.
                                 </p>
                             </div>

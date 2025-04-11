@@ -95,7 +95,7 @@ const TourDetails = () => {
                                 <h5 className="fs-18 mb-3">Description</h5>
                                 <div className="mb-2">
                                     <p>
-                                        Kicking off on April 1, 2025, the "DreamsTour" will take Luna to
+                                        Kicking off on April 1, 2025, the "City Scanner" will take Luna to
                                         major cities across North America and Europe, including Los
                                         Angeles, New York, Chicago, Toronto, and London. Each concert
                                         will showcase her unique blend of pop and ethereal soundscapes,

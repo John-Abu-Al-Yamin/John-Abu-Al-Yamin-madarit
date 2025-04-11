@@ -37,7 +37,7 @@ const TermsConditions = () => {
                 <div className="container">
                     {/* Terms Condition */}
                     <p>
-                        Welcome to Travel DreamsTour! By accessing or using our website and
+                        Welcome to Travel City Scanner! By accessing or using our website and
                         services, you agree to comply with and be bound by the following terms
                         and conditions. Please read these carefully.
                     </p>

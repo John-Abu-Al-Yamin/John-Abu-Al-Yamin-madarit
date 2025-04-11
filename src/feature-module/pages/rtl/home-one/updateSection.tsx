@@ -17,7 +17,7 @@ const UpdateSection = () => {
                     <div className="update-sec">
                         <div className="section-header text-center">
                             <h2 className="mb-1">Stay Updated</h2>
-                            <p className="sub-title">Signup for New Offers & Updates from DreamsTour </p>
+                            <p className="sub-title">Signup for New Offers & Updates from City Scanner </p>
                         </div>
                         <div className="input-group justify-content-center mx-auto">
                             <span className="input-group-text px-1"><i className="isax isax-message-favorite5"></i></span>
@@ -42,7 +42,7 @@ const UpdateSection = () => {
                     <div className="col-xl-6 col-lg-10 text-center wow fadeInUp" data-wow-delay="0.2s">
                         <div className="section-header text-center">
                             <h2 className="mb-2">Frequently Asked <span className="text-primary  text-decoration-underline">Questions</span></h2>
-                            <p className="sub-title">DreamsTour, a tour operator specializing in dream destinations, offers a variety of benefits for travelers.</p>
+                            <p className="sub-title">City Scanner, a tour operator specializing in dream destinations, offers a variety of benefits for travelers.</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ const UpdateSection = () => {
                 <div className="col-xl-6 col-lg-10 text-center wow fadeInUp" data-wow-delay="0.2s">
                     <div className="section-header text-center">
                         <h2 className="mb-2">Recent <span className="text-primary text-decoration-underline">Articles</span></h2>
-                        <p className="sub-title">DreamsTour offers various blog resources that cater to travel enthusiasts, with a focus on adventure, gear reviews, and travel tips.</p>
+                        <p className="sub-title">City Scanner offers various blog resources that cater to travel enthusiasts, with a focus on adventure, gear reviews, and travel tips.</p>
                     </div>
                 </div>
             </div>

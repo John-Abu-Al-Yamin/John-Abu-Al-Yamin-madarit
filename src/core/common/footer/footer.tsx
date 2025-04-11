@@ -204,7 +204,7 @@ const Footer = () => {
                       to="#"
                       className="text-primary fw-medium"
                     >
-                      DreamsTour
+                      City Scanner
                     </Link>
                   </p>
                   <div className="d-flex align-items-center">

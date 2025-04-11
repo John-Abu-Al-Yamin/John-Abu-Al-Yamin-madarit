@@ -21,7 +21,7 @@ const ForgotPasswordModal = () => {
                 <form>
                     <div className="text-center border-bottom mb-3">
                     <h5 className="mb-1">Forgot Password</h5>
-                    <p>Reset Your DreamsTour Password</p>
+                    <p>Reset Your City Scanner Password</p>
                     </div>
                     <div className="mb-4">
                     <label className="form-label">Email</label>

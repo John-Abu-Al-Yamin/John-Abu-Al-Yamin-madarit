@@ -114,7 +114,7 @@ import { auth, googleProvider, facebookProvider } from "../../../firebase-config
                   <Form>
                     <div className="text-center mb-3">
                       <h5 className="mb-1">Sign In</h5>
-                      <p>Sign in to Start Manage your DreamsTour Account</p>
+                      <p>Sign in to Start Manage your City Scanner Account</p>
                     </div>
                     <div className="mb-2">
                       <label className="form-label">Email or Phone</label>
@@ -293,7 +293,7 @@ export default LoginModal;
 //               <form onSubmit={onSubmit}>
 //                 <div className="text-center mb-3">
 //                   <h5 className="mb-1">Sign In</h5>
-//                   <p>Sign in to Start Manage your DreamsTour Account</p>
+//                   <p>Sign in to Start Manage your City Scanner Account</p>
 //                 </div>
 //                 <div className="mb-2">
 //                   <label className="form-label">Email or Phone</label>

@@ -106,7 +106,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">Perfect Vacation</h6>
-                            <p className="mb-4">I used DreamsTour to book our family vacation, and it was a flawless experience. From finding affordable flights to booking an amazing hotel and everything was seamless.</p>
+                            <p className="mb-4">I used City Scanner to book our family vacation, and it was a flawless experience. From finding affordable flights to booking an amazing hotel and everything was seamless.</p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">
@@ -154,7 +154,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">Quick, Easy, and Affordable</h6>
-                            <p className="mb-4">As a frequent traveler, I value convenience and price. DreamsTour is my go-to platform because they have everything in one place. I even saved money on flights and car rentals!</p>
+                            <p className="mb-4">As a frequent traveler, I value convenience and price. City Scanner is my go-to platform because they have everything in one place. I even saved money on flights and car rentals!</p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">
@@ -178,7 +178,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">Exceptional Support</h6>
-                            <p className="mb-4">DreamsTour made it simple to book everything from flights to hotels and even local tours. When I had a question about my reservation, their support team responded quickly.</p>
+                            <p className="mb-4">City Scanner made it simple to book everything from flights to hotels and even local tours. When I had a question about my reservation, their support team responded quickly.</p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">
@@ -202,7 +202,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">Great Selection of Tours and Cruises</h6>
-                            <p className="mb-4">We were looking for a cruise that fit our schedule, and DreamsTour had so many options. The booking process was straightforward, and we ended up with an amazing deal. </p>
+                            <p className="mb-4">We were looking for a cruise that fit our schedule, and City Scanner had so many options. The booking process was straightforward, and we ended up with an amazing deal. </p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">
@@ -226,7 +226,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">A Stress-free Family Vacation</h6>
-                            <p className="mb-4">Planning a vacation with kids can be tough, but DreamsTour made it super easy for us. We booked flights, hotels, and a rental car in one go. We had an amazing time & everything was perfectly arranged!</p>
+                            <p className="mb-4">Planning a vacation with kids can be tough, but City Scanner made it super easy for us. We booked flights, hotels, and a rental car in one go. We had an amazing time & everything was perfectly arranged!</p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">
@@ -250,7 +250,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">Incredible Experiences</h6>
-                            <p className="mb-4">We’ve used DreamsTour for three vacations now, and each one has been perfect. Whether it’s finding a unique tour or booking a last-minute flight, they always have the best options.</p>
+                            <p className="mb-4">We’ve used City Scanner for three vacations now, and each one has been perfect. Whether it’s finding a unique tour or booking a last-minute flight, they always have the best options.</p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">
@@ -274,7 +274,7 @@ const Testimonials = () => {
                     <div className="card border-white mb-0 wow fadeInUp flex-fill" data-wow-delay="0.2s">
                         <div className="card-body">
                             <h6 className="mb-3">The Best Travel Companion</h6>
-                            <p className="mb-4">DreamsTour has become my go-to for all travel bookings. I’ve booked everything from solo trips to group vacations, and every experience has been perfect. </p>
+                            <p className="mb-4">City Scanner has become my go-to for all travel bookings. I’ve booked everything from solo trips to group vacations, and every experience has been perfect. </p>
                             <div className="border-top pt-4 d-flex align-items-center justify-content-between">
                                 <div className="d-flex align-items-center">
                                     <Link to="#" className="avatar avatar-md  flex-shrink-0">

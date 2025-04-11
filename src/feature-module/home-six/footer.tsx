@@ -190,7 +190,7 @@ const FooterSix = () => {
                                     <p className="text-center">
                                         Copyright © 2025. All Rights Reserved,{" "}
                                         <Link to="#" className="text-primary fw-medium">
-                                            DreamsTour
+                                            City Scanner
                                         </Link>
                                     </p>
                                 </div>
