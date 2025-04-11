@@ -128,7 +128,7 @@ const HomeSix = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section hero-sec-two " style={{ overflowX: "hidden" }}>
+      <section className="hero-section hero-sec-two ">
         <div className="banner-sliders">
           <div className="slider-wrap home-vertical-slider">
             <Slider
